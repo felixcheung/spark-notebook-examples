@@ -1,0 +1,657 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md # Spark DataFrame, csv data source, processing KDDCup 1999 data",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428604814635_220408110",
+      "id": "20150409-184014_338192819",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eSpark DataFrame, csv data source, processing KDDCup 1999 data\u003c/h1\u003e\n"
+      },
+      "dateCreated": "Apr 9, 2015 6:40:14 PM",
+      "dateStarted": "Apr 19, 2015 10:37:13 PM",
+      "dateFinished": "Apr 19, 2015 10:37:13 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md ### Knowledge Discovery and Data Mining  \nThe competition task was to build a network intrusion detector, a predictive model capable of distinguishing between \u0027\u0027bad\u0027\u0027 connections, called intrusions or attacks, and \u0027\u0027good\u0027\u0027 normal connections. This database contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment (DARPA).\n[archive: http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html)",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428615935742_-1946218795",
+      "id": "20150409-214535_1547732648",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eKnowledge Discovery and Data Mining\u003c/h3\u003e\n\u003cp\u003eThe competition task was to build a network intrusion detector, a predictive model capable of distinguishing between \u0027\u0027bad\u0027\u0027 connections, called intrusions or attacks, and \u0027\u0027good\u0027\u0027 normal connections. This database contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment (DARPA).\n\u003cbr  /\u003e\u003ca href\u003d\"http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html\"\u003earchive: http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html\u003c/a\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 9, 2015 9:45:35 PM",
+      "dateStarted": "Apr 9, 2015 9:49:29 PM",
+      "dateFinished": "Apr 9, 2015 9:49:29 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md ### Dataset\n\nRandom samples (10%) from kddcup.data_10_percent.gz ",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428616138715_1295380989",
+      "id": "20150409-214858_1594025746",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eDataset\u003c/h3\u003e\n\u003cp\u003eRandom samples (10%) from kddcup.data_10_percent.gz\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 9, 2015 9:48:58 PM",
+      "dateStarted": "Apr 9, 2015 9:50:11 PM",
+      "dateFinished": "Apr 9, 2015 9:50:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md Loading data with DataFrame, Data Access API and csv data source is super easy\n\n```Scala\nval df \u003d sqlContext.load(\"com.databricks.spark.csv\", Map(\"path\" -\u003e \"/home/vagrant/data/kddcupsmall\", \"header\" -\u003e \"true\"))\n```",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1429483057525_1688572663",
+      "id": "20150419-223737_918085080",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eLoading data with DataFrame, Data Access API and csv data source is super easy\u003c/p\u003e\n\u003cpre\u003e\u003ccode class\u003d\"Scala\"\u003eval df \u003d sqlContext.load(\"com.databricks.spark.csv\", Map(\"path\" -\u0026gt; \"/home/vagrant/data/kddcupsmall\", \"header\" -\u0026gt; \"true\"))\n\u003c/code\u003e\u003c/pre\u003e\n"
+      },
+      "dateCreated": "Apr 19, 2015 10:37:37 PM",
+      "dateStarted": "Apr 19, 2015 10:37:39 PM",
+      "dateFinished": "Apr 19, 2015 10:37:39 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Load Data",
+      "text": "val df \u003d sqlContext.load(\"com.databricks.spark.csv\", Map(\"path\" -\u003e \"/home/vagrant/data/kddcupsmall\", \"header\" -\u003e \"true\"))\n",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": false,
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428599947604_-1865103831",
+      "id": "20150409-171907_982085373",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "df: org.apache.spark.sql.DataFrame \u003d [duration: string, protocol_type: string, service: string, flag: string, src_bytes: string, dst_bytes: string, land: string, wrong_fragment: string, urgent: string, hot: string, num_failed_logins: string, logged_in: string, num_compromised: string, root_shell: string, su_attempted: string, num_root: string, num_file_creations: string, num_shells: string, num_access_files: string, num_outbound_cmds: string, is_host_login: string, is_guest_login: string, count: string, srv_count: string, serror_rate: string, srv_serror_rate: string, rerror_rate: string, srv_rerror_rate: string, same_srv_rate: string, diff_srv_rate: string, srv_diff_host_rate: string, dst_host_count: string, dst_host_srv_count: string, dst_host_same_srv_rate: string, dst_host_diff_srv_r..."
+      },
+      "dateCreated": "Apr 9, 2015 5:19:07 PM",
+      "dateStarted": "Apr 9, 2015 5:23:25 PM",
+      "dateFinished": "Apr 9, 2015 5:23:26 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Let\u0027s check out the schema",
+      "text": "df.printSchema\ndf.groupBy($\"label\").count().orderBy($\"count\".desc).registerTempTable(\"networklabelcount\")\n",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": false,
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428600053269_-443887367",
+      "id": "20150409-172053_283105375",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n |-- duration: string (nullable \u003d true)\n |-- protocol_type: string (nullable \u003d true)\n |-- service: string (nullable \u003d true)\n |-- flag: string (nullable \u003d true)\n |-- src_bytes: string (nullable \u003d true)\n |-- dst_bytes: string (nullable \u003d true)\n |-- land: string (nullable \u003d true)\n |-- wrong_fragment: string (nullable \u003d true)\n |-- urgent: string (nullable \u003d true)\n |-- hot: string (nullable \u003d true)\n |-- num_failed_logins: string (nullable \u003d true)\n |-- logged_in: string (nullable \u003d true)\n |-- num_compromised: string (nullable \u003d true)\n |-- root_shell: string (nullable \u003d true)\n |-- su_attempted: string (nullable \u003d true)\n |-- num_root: string (nullable \u003d true)\n |-- num_file_creations: string (nullable \u003d true)\n |-- num_shells: string (nullable \u003d true)\n |-- num_access_files: string (nullable \u003d true)\n |-- num_outbound_cmds: string (nullable \u003d true)\n |-- is_host_login: string (nullable \u003d true)\n |-- is_guest_login: string (nullable \u003d true)\n |-- count: string (nullable \u003d true)\n |-- srv_count: string (nullable \u003d true)\n |-- serror_rate: string (nullable \u003d true)\n |-- srv_serror_rate: string (nullable \u003d true)\n |-- rerror_rate: string (nullable \u003d true)\n |-- srv_rerror_rate: string (nullable \u003d true)\n |-- same_srv_rate: string (nullable \u003d true)\n |-- diff_srv_rate: string (nullable \u003d true)\n |-- srv_diff_host_rate: string (nullable \u003d true)\n |-- dst_host_count: string (nullable \u003d true)\n |-- dst_host_srv_count: string (nullable \u003d true)\n |-- dst_host_same_srv_rate: string (nullable \u003d true)\n |-- dst_host_diff_srv_rate: string (nullable \u003d true)\n |-- dst_host_same_src_port_rate: string (nullable \u003d true)\n |-- dst_host_srv_diff_host_rate: string (nullable \u003d true)\n |-- dst_host_serror_rate: string (nullable \u003d true)\n |-- dst_host_srv_serror_rate: string (nullable \u003d true)\n |-- dst_host_rerror_rate: string (nullable \u003d true)\n |-- dst_host_srv_rerror_rate: string (nullable \u003d true)\n |-- label: string (nullable \u003d true)\n\n"
+      },
+      "dateCreated": "Apr 9, 2015 5:20:53 PM",
+      "dateStarted": "Apr 9, 2015 5:24:40 PM",
+      "dateFinished": "Apr 9, 2015 5:24:41 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql SELECT * FROM networklabelcount",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "pieChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "label",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "count",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "label",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "count",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428600113617_-1859085766",
+      "id": "20150409-172153_2008769923",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "label\tcount\nsmurf.\t28150\nneptune.\t10721\nnormal.\t9837\nback.\t216\nsatan.\t168\nipsweep.\t125\nportsweep.\t120\nteardrop.\t100\nwarezclient.\t82\nnmap.\t26\npod.\t25\nguess_passwd.\t6\nland.\t4\nbuffer_overflow.\t3\nwarezmaster.\t2\nphf.\t2\nimap.\t2\nrootkit.\t1\nspy.\t1\nmultihop.\t1\nloadmodule.\t1\n"
+      },
+      "dateCreated": "Apr 9, 2015 5:21:53 PM",
+      "dateStarted": "Apr 9, 2015 5:25:02 PM",
+      "dateFinished": "Apr 9, 2015 5:25:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md # Anomaly detection with k-means  \n## Experimenting with different k values\n\n[Advanced Analytics with Spark](http://shop.oreilly.com/product/0636920035091.do)",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428604905899_175281930",
+      "id": "20150409-184145_1875759949",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eAnomaly detection with k-means\u003c/h1\u003e\n\u003ch2\u003eExperimenting with different k values\u003c/h2\u003e\n\u003cp\u003e\u003ca href\u003d\"http://shop.oreilly.com/product/0636920035091.do\"\u003eAdvanced Analytics with Spark\u003c/a\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 9, 2015 6:41:45 PM",
+      "dateStarted": "Apr 19, 2015 10:34:25 PM",
+      "dateFinished": "Apr 19, 2015 10:34:25 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Let\u0027s Score ks",
+      "text": "val rawData \u003d sc.textFile(\"/home/vagrant/data/kddcupsmall\")\nrawData.map(_.split(\u0027,\u0027).last).countByValue().toSeq.sortBy(_._2).reverse.foreach(println)\n\nimport org.apache.spark.mllib.linalg._\nval labelsAndData \u003d rawData.zipWithIndex.flatMap {\n  case (line,index) \u003d\u003e\n    if (index \u003d\u003d 0) {\n      None\n    } else {\n      val buffer \u003d line.split(\u0027,\u0027).toBuffer\n      buffer.remove(1, 3)\n      val label \u003d buffer.remove(buffer.length-1)\n      val vector \u003d Vectors.dense(buffer.map(_.toDouble).toArray)\n      Some((label,vector))\n    }\n}\n\nimport org.apache.spark.mllib.clustering._   \ndef distance(a: Vector, b: Vector) \u003d math.sqrt(a.toArray.zip(b.toArray).map(p \u003d\u003e p._1 - p._2).map(d \u003d\u003e d * d).sum)\ndef distToCentroid(datum: Vector, model: KMeansModel) \u003d {\n  val cluster \u003d model.predict(datum)\n  val centroid \u003d model.clusterCenters(cluster)\n  distance(centroid, datum)\n}\n\nimport org.apache.spark.rdd._\nval dataAsArray \u003d labelsAndData.values.map(_.toArray).cache()\nval numCols \u003d dataAsArray.first().length\nval n \u003d dataAsArray.count()\nval sums \u003d dataAsArray.reduce(\n  (a,b) \u003d\u003e a.zip(b).map(t \u003d\u003e t._1 + t._2))\nval sumSquares \u003d dataAsArray.fold(\n  new Array[Double](numCols)\n)(\n  (a,b) \u003d\u003e a.zip(b).map(t \u003d\u003e t._1 + t._2 * t._2)\n)\nval stdevs \u003d sumSquares.zip(sums).map {\n  case(sumSq,sum) \u003d\u003e math.sqrt(n*sumSq - sum*sum)/n\n}\nval means \u003d sums.map(_ / n)\ndef normalize(datum: Vector) \u003d {\n  val normalizedArray \u003d (datum.toArray, means, stdevs).zipped.map(\n   (value, mean, stdev) \u003d\u003e\n     if (stdev \u003c\u003d 0) (value - mean) else (value - mean) / stdev\n  )\n  Vectors.dense(normalizedArray)\n}\n\nval normalizedLabelsAndData \u003d labelsAndData.map(ld \u003d\u003e (ld._1, normalize(ld._2))).cache()\n\ndef entropy(counts: Iterable[Int]) \u003d {\n  val values \u003d counts.filter(_ \u003e 0)\n  val n: Double \u003d values.sum\n  values.map { v \u003d\u003e\n        val p\u003dv/n\n        -p * math.log(p)\n      }.sum\n}\n\nval kmeansNumberRuns \u003d 10\nval kmeansEpsilon \u003d 1.0e-6\ndef clusteringScore(normalizedLabelsAndData: RDD[(String,Vector)], k: Int) \u003d {\n  val kmeans \u003d new KMeans()\n  kmeans.setRuns(kmeansNumberRuns)\n  // The algorithm exposes setRuns() to set the number of times the clustering is run for one k.\n  // It can also be improved by running the iteration longer. The algorithm has a threshold via setEpsilon() which controls the minimum amount of cluster centroid movement that is considered significant; lower values means the K-means algorithm will let the centroids continue to move longer.\n  kmeans.setEpsilon(kmeansEpsilon)\n  kmeans.setK(k)\n  val model \u003d kmeans.run(normalizedLabelsAndData.values)\n  val labelsAndClusters \u003d normalizedLabelsAndData.mapValues(model.predict)\n  \nval clustersAndLabels \u003d labelsAndClusters.map(_.swap)\n  val labelsInCluster \u003d clustersAndLabels.groupByKey().values\n  val labelCounts \u003d labelsInCluster.map( _.groupBy(l \u003d\u003e l).map(_._2.size))\n  val n \u003d normalizedLabelsAndData.count()\n  labelCounts.map(m \u003d\u003e m.sum * entropy(m)).sum / n\n}\n\nval kAndScore \u003d (10 to 60 by 10).par.map(k \u003d\u003e\n  (k, clusteringScore(normalizedLabelsAndData, k))).toList\nkAndScore.foreach(println)\n\ncase class kmeansScore(k: Int, score: Double)\nsc.parallelize(kAndScore).map{ case(a, b) \u003d\u003e kmeansScore(a, b) }.toDF.registerTempTable(\"kscore\")",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "tableHide": false,
+        "editorHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428600302534_-431222946",
+      "id": "20150409-172502_518251138",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "rawData: org.apache.spark.rdd.RDD[String] \u003d /home/vagrant/data/kddcupsmall MapPartitionsRDD[458] at textFile at \u003cconsole\u003e:32\n(smurf.,28150)\n(neptune.,10721)\n(normal.,9837)\n(back.,216)\n(satan.,168)\n(ipsweep.,125)\n(portsweep.,120)\n(teardrop.,100)\n(warezclient.,82)\n(nmap.,26)\n(pod.,25)\n(guess_passwd.,6)\n(land.,4)\n(buffer_overflow.,3)\n(imap.,2)\n(phf.,2)\n(warezmaster.,2)\n(rootkit.,1)\n(spy.,1)\n(label,1)\n(multihop.,1)\n(loadmodule.,1)\nimport org.apache.spark.mllib.linalg._\nlabelsAndData: org.apache.spark.rdd.RDD[(String, org.apache.spark.mllib.linalg.Vector)] \u003d MapPartitionsRDD[464] at flatMap at \u003cconsole\u003e:37\nimport org.apache.spark.mllib.clustering._\ndistance: (a: org.apache.spark.mllib.linalg.Vector, b: org.apache.spark.mllib.linalg.Vector)Double\ndistToCentroid: (datum: org.apache.spark.mllib.linalg.Vector, model: org.apache.spark.mllib.clustering.KMeansModel)Double\nimport org.apache.spark.rdd._\ndataAsArray: org.apache.spark.rdd.RDD[Array[Double]] \u003d MapPartitionsRDD[466] at map at \u003cconsole\u003e:45\nnumCols: Int \u003d 38\nn: Long \u003d 49593\nsums: Array[Double] \u003d Array(2596905.0, 7.44679891E8, 4.2060517E7, 4.0, 323.0, 0.0, 1838.0, 8.0, 7315.0, 500.0, 7.0, 2.0, 604.0, 56.0, 4.0, 59.0, 0.0, 0.0, 74.0, 1.6458841E7, 1.4498445E7, 8771.980000000001, 8761.700000000004, 2825.98, 2848.3500000000004, 39273.13999999998, 1058.859999999807, 1436.7700000000007, 1.1529181E7, 9348920.0, 37357.3900000006, 1554.0499999997562, 29836.74999999929, 323.899999999996, 8772.860000000099, 8754.220000000101, 2859.0000000000064, 2828.59000000001)\nsumSquares: Array[Double] \u003d Array(8.953590582877559E20, 2.3115470744788665E35, 3.192126152370795E27, 16.0, 840889.0, 0.0, 1.173884644E9, 100.0, 5.3509225E7, 5.7577744E9, 49.0, 16.0, 9.1795561E9, 665856.0, 16.0, 6241.0, 0.0, 0.0, 5476.0, 5.959425750454542E19, 5.25661750747364E19, 7.648020212761588E7, 7.657223030913597E7, 7835946.124175999, 7964140.606144809, 1.4875780666544604E9, 142838.03889667522, 1071582.1047562582, 8.336825808354303E18, 5.3846079940770591E18, 1.3336374559492042E9, 435295.2653148584, 8.665029225002679E8, 7041.660093160271, 7.637507784122856E7, 7.644720443864438E7, 7674511.116564667, 7663117.817815729)\nstdevs: Array[Double] \u003d Array(1.3436570202496237E8, 2.158943022324394E15, 2.5370547113004443E11, 0.017961616619984664, 4.117736974888401, 0.0, 153.85177384646036, 0.044904204534169, 32.847306393796956, 340.7353024657694, 0.03143282908497316, 0.017961752439890424, 430.2299595473868, 3.6642065594542585, 0.017961616619984664, 0.3547435099473194, 0.0, 0.0, 0.3322899074697163, 3.466506479236002E7, 3.2556896453352008E7, 39.2699110752304, 39.29353201122891, 12.569878151881937, 12.672281409437876, 173.19093344461191, 1.6969825534938268, 4.648299477871107, 1.296552698186266E7, 1.0419979281537298E7, 163.98499838886738, 2.962494052272353, 132.18139381490656, 0.3767576623790009, 39.24291234304883, 39.26144002102153, 12.439717157913453, 12.430482583822519)\nmeans: Array[Double] \u003d Array(52.36434577460529, 15015.826648922228, 848.1139878611901, 8.065654427036074E-5, 0.00651301594983163, 0.0, 0.037061682092230756, 1.6131308854072147E-4, 0.1475006553344222, 0.010082068033795091, 1.411489524731313E-4, 4.032827213518037E-5, 0.01217913818482447, 0.0011291916197850504, 8.065654427036074E-5, 0.001189684027987821, 0.0, 0.0, 0.0014921460690016737, 331.8783094388321, 292.3486177484726, 0.17687939830217977, 0.17667211098340502, 0.05698344524428851, 0.057434516968120505, 0.7919089387615184, 0.02135099711652465, 0.028971225777831563, 232.47597443187547, 188.51289496501522, 0.753279495090045, 0.03133607565583361, 0.6016322868146571, 0.00653116367229238, 0.17689714274192123, 0.17652128324562139, 0.057649265017240464, 0.057036073639425124)\nnormalize: (datum: org.apache.spark.mllib.linalg.Vector)org.apache.spark.mllib.linalg.Vector\nnormalizedLabelsAndData: org.apache.spark.rdd.RDD[(String, org.apache.spark.mllib.linalg.Vector)] \u003d MapPartitionsRDD[467] at map at \u003cconsole\u003e:62\nentropy: (counts: Iterable[Int])Double\nkmeansNumberRuns: Int \u003d 10\nkmeansEpsilon: Double \u003d 1.0E-6\nclusteringScore: (normalizedLabelsAndData: org.apache.spark.rdd.RDD[(String, org.apache.spark.mllib.linalg.Vector)], k: Int)Double\nkAndScore: List[(Int, Double)] \u003d List((10,1.0534643440183726), (20,0.3720360648021355), (30,0.2871808552571245), (40,0.1548095636931596), (50,0.1484563457942176), (60,0.1422352660123328))\n(10,1.0534643440183726)\n(20,0.3720360648021355)\n(30,0.2871808552571245)\n(40,0.1548095636931596)\n(50,0.1484563457942176)\n(60,0.1422352660123328)\ndefined class kmeansScore\n"
+      },
+      "dateCreated": "Apr 9, 2015 5:25:02 PM",
+      "dateStarted": "Apr 9, 2015 6:39:21 PM",
+      "dateFinished": "Apr 9, 2015 6:40:49 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md # Find the best k",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428605075251_-821924278",
+      "id": "20150409-184435_1604736576",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eFind the best k\u003c/h1\u003e\n"
+      },
+      "dateCreated": "Apr 9, 2015 6:44:35 PM",
+      "dateStarted": "Apr 9, 2015 6:44:57 PM",
+      "dateFinished": "Apr 9, 2015 6:44:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql select * from kscore",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "k",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "score",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "k",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "score",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428604589695_-1426872142",
+      "id": "20150409-183629_523147760",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "k\tscore\n10\t1.0534643440183726\n20\t0.3720360648021355\n30\t0.2871808552571245\n40\t0.1548095636931596\n50\t0.1484563457942176\n60\t0.1422352660123328\n"
+      },
+      "dateCreated": "Apr 9, 2015 6:36:29 PM",
+      "dateStarted": "Apr 9, 2015 6:42:42 PM",
+      "dateFinished": "Apr 9, 2015 6:42:42 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val kmeans \u003d new KMeans()\nkmeans.setRuns(kmeansNumberRuns)\nkmeans.setEpsilon(kmeansEpsilon)\nkmeans.setK(40)\nval model \u003d kmeans.run(normalizedLabelsAndData.values)\n\nval clusterLabel \u003d normalizedLabelsAndData.map {\n  case (label, data) \u003d\u003e\n    val cluster \u003d model.predict(data)\n    (cluster, label)\n}\nclusterLabel.countByValue.toSeq.sorted.foreach {\n  case ((cluster,label),count) \u003d\u003e\n        println(f\"$cluster%1s$label%18s$count%8s\")\n}\ncase class clusterLabelType(cluster: Int, label: String)\nclusterLabel.map {\n  case (cluster, label) \u003d\u003e clusterLabelType(cluster, label)\n}.toDF.registerTempTable(\"clusterLabel\")\n",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428604962427_1227093478",
+      "id": "20150409-184242_525055703",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "kmeans: org.apache.spark.mllib.clustering.KMeans \u003d org.apache.spark.mllib.clustering.KMeans@bc8d431\nres64: kmeans.type \u003d org.apache.spark.mllib.clustering.KMeans@bc8d431\nres65: kmeans.type \u003d org.apache.spark.mllib.clustering.KMeans@bc8d431\nres66: kmeans.type \u003d org.apache.spark.mllib.clustering.KMeans@bc8d431\nmodel: org.apache.spark.mllib.clustering.KMeansModel \u003d org.apache.spark.mllib.clustering.KMeansModel@45817cbf\nclusterLabel: org.apache.spark.rdd.RDD[(Int, String)] \u003d MapPartitionsRDD[1252] at map at \u003cconsole\u003e:68\n0          neptune.      13\n0           normal.      84\n0        portsweep.       3\n0            satan.       3\n1  buffer_overflow.       1\n1       loadmodule.       1\n1           normal.       2\n2          ipsweep.       2\n2             nmap.       5\n2           normal.    1317\n2              pod.       5\n2        portsweep.       1\n2          rootkit.       1\n2            satan.       2\n2            smurf.   28150\n2              spy.       1\n2         teardrop.       1\n2      warezmaster.       2\n3           normal.       1\n4     guess_passwd.       6\n5             land.       3\n6           normal.       4\n7         multihop.       1\n7           normal.      34\n7      warezclient.      36\n8           normal.      48\n9             back.       7\n9          ipsweep.       1\n9           normal.     610\n10          neptune.    2010\n10           normal.      50\n10        portsweep.      13\n11           normal.     186\n12          ipsweep.      23\n12           normal.       4\n13  buffer_overflow.       1\n13          neptune.       1\n13           normal.    1475\n14         teardrop.      69\n15           normal.       1\n16             land.       1\n17          neptune.       2\n17           normal.    1170\n17      warezclient.       5\n18           normal.       1\n19          ipsweep.      85\n19          neptune.       1\n19           normal.       6\n19      warezclient.       1\n20             back.      38\n20             imap.       2\n20          neptune.       1\n20           normal.     557\n21           normal.     324\n21              pod.       2\n21      warezclient.       6\n22           normal.       3\n23             back.     170\n23  buffer_overflow.       1\n23           normal.    2937\n23      warezclient.       2\n24          ipsweep.       6\n24             nmap.      11\n24           normal.     269\n24              pod.       1\n24        portsweep.      74\n25              phf.       2\n26           normal.      10\n26        portsweep.      16\n26            satan.     152\n27           normal.     108\n27      warezclient.       3\n28             back.       1\n28          neptune.      45\n28           normal.      50\n28        portsweep.       5\n28            satan.       1\n29           normal.     109\n29        portsweep.       6\n29            satan.       2\n30           normal.       7\n31              pod.      15\n32          neptune.    8646\n32           normal.       3\n32            satan.       4\n33           normal.       1\n34           normal.     214\n34        portsweep.       2\n34            satan.       3\n35          ipsweep.       2\n35           normal.       4\n35      warezclient.       1\n36          neptune.       2\n36           normal.      63\n36              pod.       2\n36      warezclient.      22\n37           normal.     138\n38          ipsweep.       6\n38             nmap.      10\n38           normal.      47\n38            satan.       1\n38      warezclient.       6\n39         teardrop.      30\ndefined class clusterLabelType\n"
+      },
+      "dateCreated": "Apr 9, 2015 6:42:42 PM",
+      "dateStarted": "Apr 9, 2015 6:57:40 PM",
+      "dateFinished": "Apr 9, 2015 6:57:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Easier if we visualize it",
+      "text": "%sql select cluster, count(label) as count, label from clusterLabel group by cluster, label",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "stackedAreaChart",
+          "height": 300.0,
+          "optionOpen": true,
+          "keys": [
+            {
+              "name": "label",
+              "index": 2.0,
+              "aggr": "sum"
+            },
+            {
+              "name": "cluster",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "count",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [
+            {
+              "name": "label",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "scatter": {
+            "xAxis": {
+              "name": "cluster",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorHide": false,
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428605053882_51440401",
+      "id": "20150409-184413_22336230",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "cluster\tcount\tlabel\n24\t11\tnmap.\n19\t85\tipsweep.\n7\t36\twarezclient.\n18\t1\tnormal.\n31\t15\tpod.\n13\t1\tneptune.\n29\t109\tnormal.\n2\t1317\tnormal.\n13\t1475\tnormal.\n24\t269\tnormal.\n19\t1\tneptune.\n9\t1\tipsweep.\n35\t4\tnormal.\n8\t48\tnormal.\n21\t2\tpod.\n35\t1\twarezclient.\n19\t6\tnormal.\n1\t1\tloadmodule.\n26\t152\tsatan.\n30\t7\tnormal.\n19\t1\twarezclient.\n3\t1\tnormal.\n20\t2\timap.\n26\t16\tportsweep.\n36\t2\tneptune.\n7\t1\tmultihop.\n10\t13\tportsweep.\n20\t1\tneptune.\n36\t63\tnormal.\n32\t4\tsatan.\n9\t7\tback.\n9\t610\tnormal.\n36\t22\twarezclient.\n20\t557\tnormal.\n20\t38\tback.\n0\t3\tsatan.\n5\t3\tland.\n38\t1\tsatan.\n2\t28150\tsmurf.\n15\t1\tnormal.\n1\t1\tbuffer_overflow.\n0\t3\tportsweep.\n16\t1\tland.\n10\t2010\tneptune.\n26\t10\tnormal.\n4\t6\tguess_passwd.\n38\t6\tipsweep.\n37\t138\tnormal.\n23\t1\tbuffer_overflow.\n39\t30\tteardrop.\n10\t50\tnormal.\n32\t8646\tneptune.\n21\t324\tnormal.\n2\t1\tspy.\n25\t2\tphf.\n38\t10\tnmap.\n32\t3\tnormal.\n21\t6\twarezclient.\n28\t1\tsatan.\n0\t13\tneptune.\n28\t5\tportsweep.\n2\t5\tpod.\n13\t1\tbuffer_overflow.\n27\t108\tnormal.\n0\t84\tnormal.\n2\t1\tteardrop.\n2\t2\twarezmaster.\n27\t3\twarezclient.\n38\t47\tnormal.\n12\t23\tipsweep.\n34\t3\tsatan.\n11\t186\tnormal.\n24\t1\tpod.\n38\t6\twarezclient.\n34\t2\tportsweep.\n22\t3\tnormal.\n17\t2\tneptune.\n29\t2\tsatan.\n33\t1\tnormal.\n2\t2\tsatan.\n6\t4\tnormal.\n28\t45\tneptune.\n2\t1\trootkit.\n17\t1170\tnormal.\n29\t6\tportsweep.\n2\t1\tportsweep.\n2\t2\tipsweep.\n28\t50\tnormal.\n28\t1\tback.\n17\t5\twarezclient.\n1\t2\tnormal.\n14\t69\tteardrop.\n24\t74\tportsweep.\n12\t4\tnormal.\n24\t6\tipsweep.\n2\t5\tnmap.\n23\t170\tback.\n23\t2937\tnormal.\n36\t2\tpod.\n35\t2\tipsweep.\n23\t2\twarezclient.\n34\t214\tnormal.\n7\t34\tnormal.\n"
+      },
+      "dateCreated": "Apr 9, 2015 6:44:13 PM",
+      "dateStarted": "Apr 9, 2015 7:01:15 PM",
+      "dateFinished": "Apr 9, 2015 7:01:18 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Let\u0027s find the anomalies",
+      "text": "val distances \u003d normalizedLabelsAndData.map {\n      case (label, data) \u003d\u003e distToCentroid(data, model)\n    }\nval threshold \u003d distances.top(100).last\n\nval originalAndData \u003d rawData.zipWithIndex.flatMap {\n  case (line,index) \u003d\u003e\n    if (index \u003d\u003d 0) {\n      None\n    } else {\n      val buffer \u003d line.split(\u0027,\u0027).toBuffer\n      buffer.remove(1, 3)\n      val label \u003d buffer.remove(buffer.length-1)\n      val vector \u003d Vectors.dense(buffer.map(_.toDouble).toArray)\n      Some((line,vector))\n    }\n}\n\nval anomalies \u003d originalAndData.filter {\n  case (original, data) \u003d\u003e\n    val normalized \u003d normalize(data)\n    distToCentroid(normalized, model) \u003e threshold\n}.keys\nanomalies.toDF.registerTempTable(\"anomalies\")",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorHide": false,
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428605589337_-2047995905",
+      "id": "20150409-185309_1854196337",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "distances: org.apache.spark.rdd.RDD[Double] \u003d MapPartitionsRDD[1314] at map at \u003cconsole\u003e:71\nthreshold: Double \u003d 0.1958040918412395\noriginalAndData: org.apache.spark.rdd.RDD[(String, org.apache.spark.mllib.linalg.Vector)] \u003d MapPartitionsRDD[1317] at flatMap at \u003cconsole\u003e:44\nanomalies: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[1319] at keys at \u003cconsole\u003e:82\n"
+      },
+      "dateCreated": "Apr 9, 2015 6:53:09 PM",
+      "dateStarted": "Apr 9, 2015 9:41:35 PM",
+      "dateFinished": "Apr 9, 2015 9:41:38 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql select `_1` as entires from anomalies",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "entires",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "entires",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428615553729_1631669618",
+      "id": "20150409-213913_1039167383",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "entires\n257,tcp,telnet,SF,181,1222,0,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,62,15,0.21,0.05,0.02,0.13,0.03,0.13,0.00,0.00,normal.\n0,tcp,http,SF,231,5283,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,12,14,0.00,0.00,0.00,0.00,1.00,0.00,0.21,40,247,1.00,0.00,0.03,0.07,0.00,0.00,0.00,0.00,normal.\n0,tcp,smtp,SF,1064,328,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,85,77,0.91,0.02,0.01,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,auth,SF,10,38,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,1,0.00,0.00,0.00,0.00,0.50,1.00,0.00,42,14,0.05,0.10,0.02,0.14,0.00,0.00,0.00,0.00,normal.\n0,tcp,auth,SF,10,36,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,1,0.00,0.00,0.00,0.00,0.50,1.00,0.00,57,14,0.05,0.07,0.02,0.14,0.00,0.00,0.00,0.00,normal.\n0,tcp,finger,SF,6,147,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,29,7,0.03,0.10,0.03,0.43,0.03,0.00,0.00,0.00,normal.\n0,tcp,finger,SF,6,137,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,36,8,0.06,0.06,0.03,0.38,0.00,0.00,0.00,0.00,normal.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,16,0.00,0.00,0.00,0.00,1.00,0.00,0.00,100,16,0.16,0.04,0.16,0.00,0.00,0.00,0.00,0.00,pod.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,20,0.00,0.00,0.00,0.00,1.00,0.00,0.00,104,20,0.19,0.04,0.19,0.00,0.00,0.00,0.00,0.00,pod.\n1,tcp,smtp,SF,1032,329,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,3,0.00,0.00,0.00,0.00,1.00,0.00,1.00,48,195,0.79,0.08,0.02,0.01,0.00,0.00,0.00,0.00,normal.\n0,tcp,auth,SF,10,39,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,1,0.00,0.00,0.00,0.00,0.50,1.00,0.00,98,17,0.08,0.04,0.01,0.12,0.00,0.00,0.00,0.00,normal.\n0,tcp,smtp,SF,1038,329,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,148,193,0.77,0.03,0.01,0.01,0.00,0.00,0.00,0.00,normal.\n0,tcp,smtp,SF,1749,331,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,57,32,0.56,0.09,0.02,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,pop_3,SF,80,23267,0,0,0,0,0,1,1,1,0,3,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,1,6,1.00,0.00,1.00,0.50,0.00,0.00,0.00,0.00,normal.\n0,tcp,private,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,1.00,1.00,1.00,0.00,0.00,66,2,0.02,1.00,0.02,1.00,0.00,0.00,0.92,1.00,ipsweep.\n0,tcp,private,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,1.00,1.00,1.00,0.00,0.00,30,2,0.03,1.00,0.03,1.00,0.00,0.00,0.90,1.00,ipsweep.\n0,tcp,pop_3,SF,38,130,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,25,5,0.12,0.20,0.04,0.40,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,15722,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,11,11,0.00,0.00,0.00,0.00,1.00,0.00,0.00,111,84,0.58,0.05,0.58,0.02,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,15722,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,2,2,0.00,0.00,0.00,0.00,1.00,0.00,0.00,110,38,0.35,0.05,0.35,0.00,0.00,0.00,0.00,0.00,normal.\n150,tcp,telnet,SF,1587,6707,0,0,0,1,0,1,3,0,0,1,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,1,1,1.00,0.00,1.00,0.00,0.00,0.00,0.00,0.00,buffer_overflow.\n0,tcp,ftp_data,SF,16787,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,11,12,0.00,0.00,0.00,0.00,1.00,0.00,0.17,31,117,0.74,0.10,0.74,0.02,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,SF,313,2698,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,2,0.00,0.00,0.00,0.50,1.00,0.00,1.00,255,254,1.00,0.01,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,16787,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,8,7,0.00,0.00,0.00,0.00,0.88,0.25,0.00,192,100,0.42,0.03,0.42,0.02,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0.00,0.00,1.00,1.00,1.00,0.00,1.00,6,255,1.00,0.00,0.17,0.11,0.00,0.00,1.00,1.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0.00,0.00,1.00,1.00,1.00,0.00,1.00,44,255,1.00,0.00,0.02,0.11,0.00,0.00,1.00,1.00,normal.\n0,tcp,smtp,SF,1252,390,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,5,0.00,0.00,0.00,0.00,1.00,0.00,1.00,255,51,0.20,0.65,0.00,0.00,0.65,0.00,0.00,0.00,normal.\n179,tcp,ftp,SF,87,319,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,1,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,255,2,0.01,0.01,0.00,0.00,0.00,0.00,0.04,0.00,multihop.\n0,udp,domain_u,SF,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,251,16,0.05,0.03,0.05,0.12,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,4,239,1.00,0.00,0.25,0.08,0.00,0.00,1.00,1.00,normal.\n15,tcp,smtp,SF,1127,326,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,188,137,0.73,0.03,0.01,0.00,0.00,0.00,0.00,0.00,normal.\n11,tcp,smtp,SF,748,328,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,218,159,0.73,0.02,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,7940,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0,8,8,0.00,0.00,0.00,0.00,1.00,0.00,0.00,136,52,0.21,0.10,0.27,0.04,0.01,0.02,0.02,0.00,normal.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,2,110,1.00,0.00,1.00,0.25,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,21,0.00,0.00,0.00,0.00,1.00,0.00,1.00,2,190,1.00,0.00,1.00,0.25,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,28,0.00,0.00,0.00,0.00,1.00,0.00,1.00,2,61,1.00,0.00,1.00,0.26,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,10,0.00,0.00,0.00,0.00,1.00,0.00,1.00,4,68,1.00,0.00,1.00,0.25,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,30,0.00,0.00,0.00,0.00,1.00,0.00,1.00,2,98,1.00,0.00,1.00,0.26,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,49,0.00,0.00,0.00,0.00,1.00,0.00,1.00,4,20,1.00,0.00,1.00,0.25,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,6,0.00,0.00,0.00,0.00,1.00,0.00,1.00,1,255,1.00,0.00,1.00,0.25,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,50,0.00,0.00,0.00,0.00,1.00,0.00,1.00,1,89,1.00,0.00,1.00,0.26,0.00,0.00,0.00,0.00,nmap.\n0,icmp,eco_i,SF,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,5,0.00,0.00,0.00,0.00,1.00,0.00,1.00,1,209,1.00,0.00,1.00,0.25,0.00,0.00,0.00,0.00,nmap.\n0,tcp,finger,SF,9,268,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,21,8,0.05,0.10,0.05,0.38,0.00,0.12,0.05,0.00,normal.\n0,tcp,auth,SF,9,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0.00,0.00,0.00,0.00,0.50,1.00,0.00,11,5,0.09,0.36,0.09,0.40,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,245,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,0.00,0.00,0.00,0.00,0.67,0.67,0.00,141,31,0.16,0.05,0.16,0.06,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,10272,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,12,12,0.00,0.00,0.00,0.00,1.00,0.00,0.00,246,92,0.37,0.02,0.37,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,334,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,1,5,1.00,0.00,1.00,0.40,0.00,0.00,0.00,0.00,warezclient.\n0,tcp,telnet,S0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,3,1.00,1.00,0.00,0.00,0.19,0.12,0.00,43,4,0.07,0.07,0.02,0.50,1.00,0.75,0.00,0.00,neptune.\n0,udp,private,SF,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,3,0.00,0.00,0.00,0.00,0.50,0.33,0.00,255,3,0.01,0.98,0.02,0.00,0.20,0.00,0.78,0.00,satan.\n0,tcp,other,SF,16787,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,10,1,0.10,0.00,0.00,0.00,0.10,0.80,0.00,82,1,0.01,0.12,0.27,0.00,0.02,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,1.00,1.00,1.00,0.00,0.00,1,35,1.00,0.00,1.00,0.37,0.00,0.00,1.00,1.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,10,226,1.00,0.00,0.10,0.10,0.00,0.00,1.00,1.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,3,255,1.00,0.00,0.33,0.09,0.00,0.00,1.00,0.96,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,127,249,1.00,0.00,0.01,0.09,0.00,0.00,0.54,0.75,normal.\n0,tcp,smtp,SF,1676,336,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,140,187,0.78,0.04,0.01,0.01,0.00,0.00,0.00,0.00,normal.\n0,tcp,smtp,SF,719,339,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,105,65,0.60,0.03,0.01,0.03,0.00,0.00,0.00,0.00,normal.\n0,tcp,smtp,SF,711,330,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,255,3,0.01,0.87,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,334,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,1,5,1.00,0.00,1.00,0.40,0.00,0.00,0.00,0.00,warezclient.\n0,tcp,ftp_data,SF,334,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,2,0.00,0.00,0.00,0.00,1.00,0.00,0.00,4,8,1.00,0.00,1.00,0.38,0.00,0.00,0.00,0.00,warezclient.\n0,tcp,ftp_data,SF,0,2072,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,4,3,0.00,0.00,0.00,0.00,0.75,0.50,0.00,3,5,1.00,0.00,1.00,0.40,0.00,0.00,0.00,0.00,loadmodule.\n4,tcp,smtp,SF,2316,339,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,106,103,0.74,0.05,0.01,0.02,0.00,0.00,0.00,0.00,normal.\n0,tcp,ftp_data,SF,334,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,2,0.00,0.00,0.00,0.00,1.00,0.00,0.00,4,8,1.00,0.00,1.00,0.38,0.00,0.00,0.00,0.00,warezclient.\n0,tcp,ftp_data,SF,334,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,1,9,1.00,0.00,1.00,0.44,0.00,0.00,0.00,0.00,warezclient.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,2,118,1.00,0.00,0.50,0.35,0.00,0.01,1.00,0.99,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,49,168,1.00,0.00,0.02,0.25,0.00,0.01,1.00,0.99,normal.\n0,tcp,auth,SF,14,39,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,2,2,0.50,1.00,0.50,1.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,7,255,1.00,0.00,0.14,0.11,0.00,0.00,1.00,1.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,14,255,1.00,0.00,0.07,0.10,0.00,0.00,1.00,1.00,normal.\n1,tcp,smtp,SF,2748,455,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,3,0.00,0.00,0.00,0.00,1.00,0.00,1.00,13,12,0.85,0.23,0.08,0.17,0.00,0.00,0.00,0.08,normal.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,2,1,0.50,1.00,0.50,0.00,0.00,0.00,0.00,0.00,pod.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,0.00,0.00,0.00,0.00,1.00,0.00,0.50,3,10,0.67,0.67,0.67,0.50,0.00,0.00,0.00,0.00,pod.\n0,tcp,finger,SF,7,136,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0.00,0.00,0.00,0.00,0.33,0.67,0.00,209,6,0.02,0.03,0.00,0.33,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,2,254,1.00,0.00,0.50,0.10,0.00,0.00,1.00,1.00,normal.\n5,tcp,smtp,SF,1808,325,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,154,112,0.73,0.03,0.01,0.00,0.00,0.00,0.00,0.00,normal.\n0,udp,private,SF,28,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,255,1,0.00,0.02,0.00,0.00,0.00,0.00,0.77,0.00,teardrop.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,1.00,1.00,1.00,0.00,0.00,4,75,1.00,0.00,0.25,0.39,0.00,0.00,1.00,1.00,normal.\n0,udp,domain_u,SF,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,255,1,0.00,0.85,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,0.00,0.00,0.00,0.00,1.00,0.00,0.50,4,151,1.00,0.00,1.00,0.06,0.00,0.00,0.00,0.00,pod.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,0.00,0.00,0.00,0.00,1.00,0.00,0.50,2,151,1.00,0.00,1.00,0.11,0.00,0.00,0.00,0.00,pod.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,0.00,0.00,0.00,0.00,1.00,0.00,0.50,4,151,1.00,0.00,1.00,0.12,0.00,0.00,0.00,0.00,pod.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0.00,0.00,0.00,0.00,1.00,0.00,0.67,1,151,1.00,0.00,1.00,0.13,0.00,0.00,0.00,0.00,pod.\n0,tcp,ftp_data,SF,15722,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,8,8,0.00,0.00,0.00,0.00,1.00,0.00,0.00,107,14,0.13,0.05,0.13,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,3,22,1.00,0.00,0.33,0.36,0.00,0.00,1.00,1.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,8,255,1.00,0.00,0.12,0.11,0.00,0.00,1.00,1.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,6,155,1.00,0.00,0.17,0.25,0.00,0.00,1.00,1.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,1,255,1.00,0.00,1.00,0.10,0.00,0.00,1.00,0.89,normal.\n0,tcp,smtp,SF,2206,331,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,255,7,0.03,0.65,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,1.00,1.00,1.00,0.00,1.00,73,255,1.00,0.00,0.01,0.08,0.00,0.00,1.00,0.97,normal.\n0,tcp,ftp_data,SF,10272,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,10,10,0.00,0.00,0.00,0.00,1.00,0.00,0.00,155,22,0.10,0.03,0.10,0.09,0.00,0.00,0.00,0.00,normal.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,12,0.00,0.00,0.00,0.00,1.00,0.00,0.00,255,14,0.05,0.02,0.05,0.00,0.00,0.00,0.00,0.00,pod.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,15,0.00,0.00,0.00,0.00,1.00,0.00,0.00,255,17,0.07,0.02,0.07,0.00,0.00,0.00,0.00,0.00,pod.\n0,icmp,ecr_i,SF,1480,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,20,0.00,0.00,0.00,0.00,1.00,0.00,0.00,255,22,0.09,0.02,0.09,0.00,0.00,0.00,0.00,0.00,pod.\n0,tcp,smtp,SF,613,328,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,3,0.00,0.00,0.00,0.00,0.50,1.00,1.00,255,17,0.07,0.62,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n0,tcp,http,REJ,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.00,0.00,1.00,1.00,1.00,0.00,0.00,1,7,1.00,0.00,1.00,0.43,0.00,0.00,1.00,1.00,normal.\n3,tcp,smtp,SF,1924,332,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,147,208,0.78,0.03,0.01,0.01,0.00,0.00,0.00,0.00,normal.\n1,tcp,smtp,SF,1233,330,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,3,0.00,0.00,0.00,0.00,1.00,0.00,1.00,3,201,0.67,0.67,0.33,0.01,0.00,0.01,0.00,0.00,normal.\n0,tcp,smtp,SF,1565,312,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,255,168,0.66,0.06,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n0,icmp,eco_i,SF,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,4,43,1.00,0.00,1.00,0.26,0.00,0.00,0.00,0.00,ipsweep.\n176,tcp,telnet,SF,1559,2732,0,0,0,3,0,1,4,1,0,0,1,0,0,0,0,0,1,1,0.00,0.00,0.00,0.00,1.00,0.00,0.00,8,8,1.00,0.00,0.12,0.00,0.00,0.00,0.12,0.12,buffer_overflow.\n0,tcp,smtp,SF,3545,329,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,2,0.00,0.00,0.00,0.00,1.00,0.00,1.00,255,14,0.05,0.70,0.00,0.00,0.00,0.00,0.00,0.00,normal.\n"
+      },
+      "dateCreated": "Apr 9, 2015 9:39:13 PM",
+      "dateStarted": "Apr 9, 2015 9:44:27 PM",
+      "dateFinished": "Apr 9, 2015 9:44:29 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql show tables",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "tableName",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "isTemporary",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "tableName",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "isTemporary",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1428615452736_92873231",
+      "id": "20150409-213732_2001885133",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "tableName\tisTemporary\nnetworklabelcount\ttrue\nresult\ttrue\nclusterlabel\ttrue\nanomalies\ttrue\nkscore\ttrue\n"
+      },
+      "dateCreated": "Apr 9, 2015 9:37:32 PM",
+      "dateStarted": "Apr 9, 2015 9:42:08 PM",
+      "dateFinished": "Apr 9, 2015 9:42:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "K-means",
+  "id": "2AMJJC1YW",
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}

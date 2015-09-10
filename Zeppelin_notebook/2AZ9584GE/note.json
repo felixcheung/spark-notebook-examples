@@ -514,14 +514,14 @@
       "jobName": "paragraph_1441787218370_-197725872",
       "id": "20150909-082658_1945383544",
       "result": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "type": "TEXT",
         "msg": ""
       },
       "dateCreated": "Sep 9, 2015 8:26:58 AM",
       "dateStarted": "Sep 9, 2015 8:40:09 AM",
       "dateFinished": "Sep 9, 2015 8:40:10 AM",
-      "status": "ERROR",
+      "status": "READY",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -708,14 +708,14 @@
       "jobName": "paragraph_1441567737680_2068296366",
       "id": "20150906-192857_870677984",
       "result": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "type": "TEXT",
         "msg": ""
       },
       "dateCreated": "Sep 6, 2015 7:28:57 PM",
       "dateStarted": "Sep 9, 2015 8:35:00 AM",
       "dateFinished": "Sep 9, 2015 8:35:02 AM",
-      "status": "ERROR",
+      "status": "READY",
       "progressUpdateIntervalMs": 500
     },
     {
